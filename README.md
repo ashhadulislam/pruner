@@ -112,6 +112,8 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
+Please make sure you have pytorch installed
+
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
@@ -227,7 +229,7 @@ Project Link: [https://github.com/ashhadulislam/pruner](https://github.com/ashha
 [license-shield]: https://img.shields.io/github/license/ashhadulislam/pruner.svg?style=for-the-badge
 [license-url]: https://github.com/ashhadulislam/pruner/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://linkedin.com/in/ashhadul-islam-b508581a
 [product-screenshot]: images/screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
