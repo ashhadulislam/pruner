@@ -1,1 +1,1 @@
-from .pruner import PruneModel
+from .torchpruner import PruneModel

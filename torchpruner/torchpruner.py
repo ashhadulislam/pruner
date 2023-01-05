@@ -150,7 +150,7 @@ def create_mask_from_mean_wt(model,mean_weight_description,prune_rate):
                 all_wts_this_neu=mean_wt_layer[neuron_index]
                 all_wts_this_neu=np.asarray(all_wts_this_neu)
                 all_wts_this_neu=all_wts_this_neu.flatten()
-                all_wts_this_neu=all_wts_this_neu.astype(np.float)
+                all_wts_this_neu=all_wts_this_neu.astype(float)
                 all_wts_this_neu=torch.tensor(all_wts_this_neu)
 #                 print(all_wts_this_neu)
                 wts_this_layer.append(all_wts_this_neu) 
@@ -653,7 +653,7 @@ class PruneModel:
                         
                         
 
-    def smart_prune(self,target_compression,train_loader,test_loader,max_count=2,num_epochs=10,
+    def smart_prune(self,train_loader,test_loader,target_compression=0.5,max_count=2,num_epochs=10,
                     criterion = nn.CrossEntropyLoss(), 
                                  optimizer = None, 
                                  scheduler = None,
@@ -673,7 +673,10 @@ class PruneModel:
         if prune_rate is None:
             print("Calculaitng prune rate for ",target_compression,"compression")
             prune_rate=get_prune_rate_for_compression(self.model,target_compression)
-        print("Prune rate for ",target_compression,"=",prune_rate)
+            print("Prune rate for ",target_compression,"=",prune_rate)
+        else:
+            print("Given prune rate is ",prune_rate)
+            print("Prune rate overrides target_compression")
         mask_whole_model=get_mask_from_pruned_model(self.model)
         real_prune_rate=prune_rate
         count=0
